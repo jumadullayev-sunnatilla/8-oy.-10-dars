@@ -7,15 +7,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { ICustomers } from "@/types";
 
-// function createData(
-//   fname: string,
-//   lname: string,
-//   phone_primary: string,
-//   budget: number,
-//   address: string
-// ) {
-//   return { fname, lname, phone_primary, budget, address };
-// }
+// GIT
 
 const BasicTable: React.FC<{ data: ICustomers[] }> = ({ data }) => {
   // const rows = [

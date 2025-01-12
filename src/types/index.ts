@@ -11,7 +11,7 @@ export interface ICustomers {
   budget: number;
   lname: number;
 }
-export interface Product {
+export interface ProductData {
   adminId: string;
   category: string;
   comment: string;

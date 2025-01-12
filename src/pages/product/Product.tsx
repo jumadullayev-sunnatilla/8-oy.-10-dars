@@ -15,7 +15,7 @@ import { useState } from "react";
 import LogOutDashbord from "@/pages/logOutDashbord/LogOutDashbord";
 import { useQuery } from "@tanstack/react-query";
 
-import { Product } from "@/types";
+import { ProductData } from "@/types";
 import { request } from "@/api";
 
 const Product = () => {
@@ -47,7 +47,7 @@ const Product = () => {
   const JamiPage = Math.floor(data?.totalCount / limitSelect);
 
   // Umumiy mahsulotlar soni va mahsulotlar ro'yxati
-  const products: Product[] = data?.innerData || []; // Mahsulotlar ro'yxati
+  const products: ProductData[] = data?.innerData || []; // Mahsulotlar ro'yxati
 
   return (
     <div>

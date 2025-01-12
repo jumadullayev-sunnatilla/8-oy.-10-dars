@@ -1,4 +1,4 @@
-import { Product } from "@/types";
+import { ProductData } from "@/types";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -7,7 +7,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
-const TableProduct: React.FC<{ data: Product[]; loading: boolean }> = ({
+const TableProduct: React.FC<{ data: ProductData[]; loading: boolean }> = ({
   data,
   loading,
 }) => {
@@ -27,7 +27,7 @@ const TableProduct: React.FC<{ data: Product[]; loading: boolean }> = ({
             </TableHead>
             <TableBody>
               {loading && <h2>Loading....</h2>}
-              {data.map((row: Product) => (
+              {data.map((row: ProductData) => (
                 <TableRow
                   key={row._id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
