@@ -30,12 +30,12 @@ const Customer = () => {
   const [open, setOpen] = useState<null | string>(null);
   // data fetching
   const { data } = useQuery({
-    queryKey: ["todos", page, limitSelect],
+    queryKey: ["customer", page, limitSelect],
     queryFn: () => {
       return request
         .get("/get/customers", {
           params: {
-            skip: page,
+            skip: page - 1,
             limit: limitSelect,
           },
         })
@@ -79,7 +79,7 @@ const Customer = () => {
           <LogOutDashbord />
         </Box>
       </Box>
-      <Table data={data?.innerData} />
+      <Table data={data?.innerData} type={"customer"} />
       <div className="mx-auto w-[400px] mt-10">
         <Pagination count={JamiPage} color="primary" onChange={handleChange} />
       </div>

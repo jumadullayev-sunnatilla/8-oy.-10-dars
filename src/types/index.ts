@@ -10,6 +10,8 @@ export interface ICustomers {
   address: string;
   budget: number;
   lname: number;
+  pin: boolean;
+  isPaidToday: string;
 }
 export interface ProductData {
   adminId: string;
@@ -25,4 +27,9 @@ export interface ProductData {
   updatedAt: string; // ISO8601 formatdagi sana
   __v: number; // Versiya
   _id: string; // Unique ID
+}
+export default interface BodyPayment {
+  customerId: string;
+  amount: number;
+  comment: string;
 }

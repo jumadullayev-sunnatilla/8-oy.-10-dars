@@ -29,7 +29,7 @@ const Seller = () => {
   };
   const [open, setOpen] = useState<null | string>(null);
   const { data } = useQuery({
-    queryKey: ["todos", page],
+    queryKey: ["seller", page],
     queryFn: () => {
       return request
         .get("/get/sellers", {
@@ -78,7 +78,7 @@ const Seller = () => {
           <LogOutDashbord />
         </Box>
       </Box>
-      <Table data={data?.innerData} />
+      <Table data={data?.innerData} type={"seller"} />
 
       <div className="mx-auto w-[400px] mt-10">
         <Pagination count={JamiPage} color="primary" onChange={handleChange} />
